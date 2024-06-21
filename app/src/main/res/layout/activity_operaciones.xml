@@ -12,7 +12,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginHorizontal="10sp"
-        android:paddingBottom="10sp">
+        android:paddingBottom="10sp"
+        android:gravity="center">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,6 +23,7 @@
             android:textSize="20sp"
             android:gravity="center"
             android:paddingBottom="10sp"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +31,7 @@
             android:inputType="numberDecimal"
             android:hint="Número 1"
             android:paddingBottom="10sp"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +44,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/outResultado"
-            android:text="Resultado: "/>
+            android:text="Resultado: "
+            android:textSize="22dp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,39 +54,69 @@
             android:gravity="center"
             android:padding="10sp"
             android:orientation="horizontal">
-            <Button
+            <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/btnSumar"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/btnRestar"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*"
-                android:id="@+id/btnMultiplicar"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"
-                android:id="@+id/btnDividir"/>
+                android:rowCount="2"
+                android:columnCount="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSumar"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#1565C0"
+                    android:text="+"
+                    android:textSize="30sp"
+                    android:layout_gravity="fill"/>
+
+                <Button
+                    android:id="@+id/btnRestar"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#C62828"
+                    android:text="-"
+                    android:textSize="30sp"
+                    android:layout_gravity="fill"/>
+
+                <Button
+                    android:id="@+id/btnMultiplicar"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FF8F00"
+                    android:text="x"
+                    android:textSize="30sp"
+                    android:layout_gravity="fill"/>
+
+                <Button
+                    android:id="@+id/btnDividir"
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#FF8F00"
+                    android:text="/"
+                    android:textSize="30sp"
+                    android:layout_gravity="fill"/>
+            </GridLayout>
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnLimpiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Limpiar"
             android:layout_marginBottom="10sp"
-            android:id="@+id/btnLimpiar"/>
+            android:backgroundTint="#121111"
+            android:text="Limpiar" />
+
         <Button
+            android:id="@+id/btnRegresar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Regresar"
-            android:id="@+id/btnRegresar"/>
+            android:backgroundTint="#736C6C"
+            android:text="Regresar" />
 
     </LinearLayout>
 
